@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<Table>
+	<book>
+		<Title> lang="en">Deep Work</Title>
+		<Author>Cal Newport </Author>
+		<Attributes> Learning How to Work with Deep Focus </Attributes>
+	</book>
+	<book>
+		<Title> lang="en">Harry Potter</Title>
+		<Author> J.K Rowling </Author>
+		<Attributes> Adventures of Harry Potter in the Wizarding World </Attributes>
+	</book>
+	<book>
+		<Title>lang="en">Attached</Title>
+		<Author>Amir Levante</Author>
+		<Attributes> Studies of Attachment theory in Psychology </Attributes>
+	</book>
+</Table>
+
+
