@@ -1,0 +1,42 @@
+---
+title: "Week 7 Assignment"
+author: "Al Haque"
+date: "3/16/2022"
+output: html_document
+---
+
+## Info: 
+ The task is to convert an html file,json and xml file into a dataframe into R at first I wasnt sure how to read the files from the web so I did read it locally.But I later tailored each file for reproducibility, so I put the files into Github and I used the readlines function to read the raw data and then I parsed each file to its specific function i.e html file to htmlparse, xml file to xml parse and json file to Fromjson. From there I did my best to convert the information into a R data_frame 
+
+```{r}
+
+## converting html page to a R data frame
+## wasn't sure how to read the direct html file since I used sublime text edit to make the html so I used readLines to read from the raw data from Github 
+library(XML)
+library(jsonlite)
+library(dplyr)
+url <- readLines("https://raw.githubusercontent.com/AldataSci/Data607Week7Assignment/main/table.html")
+parsed_detail <- htmlParse(url)
+
+tables <- readHTMLTable(url)
+table <- as.data.frame(tables)
+table
+```
+
+```{r}
+## getting an xml file using xmlToDataFrame to convert an xml file into a Data Frame 
+URL <- readLines("https://raw.githubusercontent.com/AldataSci/Data607Week7Assignment/main/book.xml")
+book_xml <- xmlParse("C://Users//Al Haque//Desktop//AL Info Folder//book.xml")
+book <-xmlToDataFrame(book_xml)
+book
+```
+
+```{r}
+##json file.
+## converting a json file into a Data Frame
+link <- "https://raw.githubusercontent.com/AldataSci/Data607Week7Assignment/main/book.json"
+book_json <- fromJSON(link) %>%
+  as.data.frame()
+book_json
+```
+
